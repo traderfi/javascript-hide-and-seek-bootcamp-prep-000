@@ -7,16 +7,12 @@ function nestedTarget() {
   return document.querySelector('#nested div div div .target');
 }
 
-
-
 function increaseRankBy(n){
-  const lis = document.getElementById('app').querySelectorAll('ul.ranked-list ')
+  const lis = document.getElementById('app').querySelectorAll('ul.ranked-list')
   for ( let i = 0; i < lis.length; i++){
     lis[i].innerHTML = parseInt((i+n).toString())
   }
 }
-
-increaseRankBy(3);
 
 function deepestChild() {
   return document.querySelectorAll('#grand-node div div div div');
