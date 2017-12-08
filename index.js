@@ -3,16 +3,21 @@ function getFirstSelector(selector) {
       return document.querySelector(selector);
 }
 
-
-
 function nestedTarget() {
   return document.querySelector('#nested div div div .target');
 }
 
-function increaseRankBy(n) {
-
+function increaseRankBy(n){
+  const lis = document.getElementById('app').querySelectorAll('ul.ranked-list')
+  for ( let i = 0; i < lis.length; i++){
+    lis[i].innerHTML = parseInt((i+n).toString())
+  }
 }
+
+
 
 function deepestChild() {
 
+  return document.querySelector('#grand-node div div div div');
 }
+deepestChild();
